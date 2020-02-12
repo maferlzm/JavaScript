@@ -1,4 +1,4 @@
-/**Dada la base y la altura de un triangulo, realizar el pseudocodigo que escriba el área del triángulo */
+/**Dada la base y la altura de un triangulo calcular el área del triángulo */
 
 let altura;
 let base;
