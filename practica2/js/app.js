@@ -1,3 +1,5 @@
+/**Cálculo de precio pintura */
+
 let pintura;
 let metros;
 let precio;
