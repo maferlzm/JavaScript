@@ -2,7 +2,7 @@
 
 /** DECLARACIÓN DE VARIABLES */
 
-
+/**Suma de dos números */
 let numero1 ;
 let numero2 ;
 let resultado;
