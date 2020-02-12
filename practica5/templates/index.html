@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"/>
+    <title>Promedio de calificaciones</title>
+  </head>
+  <body>
+    <h1 class="text-center">Calificaciones del alumno</h1>
+
+    <div class="container">
+        <div class="jumbotron">
+
+            <!-- Nombre del alumno -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Alumno: </label>
+                        <input type="text" id="nombre" class="form-control" placeholder="Ingrese el nombre completo del alumno"> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Matrícula -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Matrícula: </label>
+                        <input type="text" id="mat" class="form-control" placeholder="Ingresa la matrícula del alumno">
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <!-- Materia 1  -->
+                        <label for="">Materia I: </label>
+                        <input type="number" id="uno" class="form-control" placeholder="Calificación">
+                    </div>
+                </div>
+            </div>
+
+        <!-- Materia 2 -->
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                        <label for="">Materia II: </label>
+                        <input type="number" id="dos" class="form-control" placeholder="Calificación">
+                </div>
+            </div>
+        </div>
+
+        <!-- Materia 3 -->
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Materia III:</label>
+                    <input type="number" id="tres" class="form-control" placeholder="Calificación">
+                </div>
+            </div>
+        </div>
+
+        <!-- Materia 4 -->
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Materia IV:</label>
+                    <input type="number" id="cuatro" class="form-control" placeholder="Calificación">
+                </div>
+            </div>
+        </div>
+
+        <!-- Materia 5 -->
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">Materia V:</label>
+                    <input type="number" id="cinco" class="form-control" placeholder="Calificación">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-outline-success btn-block" id="btnCalcular">Mostrar datos</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <!-- <button class="btn btn-outline-success btn-block"></button> -->
+                <div id="datos" class="alert alert-primary mt-3" role="alert">Datos del alumno</div>
+                <div id="prome" class="alert alert-primary mt-3" role="alert">Promedio</div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
