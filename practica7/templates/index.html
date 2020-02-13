@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"/>
+    <title>Puntaje final</title>
+</head>
+<body>
+    <h1 class="text-center">Puntaje total</h1>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Ingrese el número de respuestas correctas: </label>
+                        <input type="number" id="correctas" class="form-control" placeholder="Respuestas correctas">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Ingresa el número de las respuestas inccorectas: </label>
+                        <input type="number" id="incorrectas" class="form-control" placeholder="Respuestas incorrectas">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Ingresa el número de las respuestas en blanco: </label>
+                        <input type="number" id="blanco" class="form-control" placeholder="Respuestas en blanco">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <button  class="btn btn-outline-info btn-block" id="btnPuntaje">Puntaje final</button>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-success" role="alert" id="puntaje"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/app.js"></script>
+</body>
+</html>
