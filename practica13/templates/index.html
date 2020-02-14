@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"/>
+    <title>Viáticos</title>
+</head>
+<body>
+    <h1 class="text-center">Viáticos</h1>
+    <div class="container">
+        <div class="jumbotron">
+            <!-- Días dle hotel -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Ingresa el número de días de estadía en el hotel: </label>
+                        <input type="number" id="diasH" class="form-control" placeholder="Días de estancia" >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Precio del hotel -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Ingresa el costo del hotel por día: </label>
+                        <input type="number" id="precioH" class="form-control" placeholder="Precio del hotel">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Precio de comida -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Ingresa los gastos de comida: </label>
+                        <input type="number" id="gastosC" class="form-control" placeholder="Gastos de comida">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-outline-info btn-block" id="btnCalcular" >Calcular viáticos</button>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-success" role="alert" id="viatico"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="/js/app.js"></script>
+</body>
+</html>
