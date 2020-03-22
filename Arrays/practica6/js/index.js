@@ -29,7 +29,7 @@ function InitApp(event){
 
     llenarArray(event.target.value);
 }
-5579 0900 3552 9024
+
 function llenarArray(tamArray){
     let sumaArrayUno =0;
     let sumaArrayDos =0;
