@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"/>
+      <link rel="stylesheet" href="/css/style.css">
+    <title>Tiro Parabólico</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="">Ingresa la velocidad inicial del proyectil</label>
+                        <input type="text" id="velocidad" class="form-control" placeholder="Ingrese la velocidad m/s">
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="">Ingrese los grados del proyectil: </label>
+                        <input type="text" id="angulo" class="form-control" placeholder="Ingrese los grados">
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="button" id="btnCalcular" class="btn btn-primary btn-lg-btn-block">Calcular</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="contenedor" id="contenedor">
+                    <span style="bottom: 0%; left: 0%;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/proyectil.class.js"></script>
+</body>
+</html>
