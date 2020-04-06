@@ -1,40 +1,40 @@
 class ManipularLocalStorage {
-    static ArrayActividades = [];
+    static arrayCompletadas = [];
     static ArrayTerminadas = [];
 
-    static AgregarActividadLocalStorage(contenidoActividad) {
-        this.ArrayActividades = this.ObtenerLocalStorage('actividades');
-        this.ArrayActividades.push(contenidoActividad);
-        localStorage.setItem('actividades', JSON.stringify(this.ArrayActividades));
+    static AgregarTareaLS(contenidoTarea) {
+        this.arrayCompletadas = this.ObtenerLocalStorage('tareas');
+        this.arrayCompletadas.push(contenidoTarea);
+        localStorage.setItem('tareas', JSON.stringify(this.arrayCompletadas));
     }
 
     static ObtenerLocalStorage(keyLS) {
-        let actividadesObtenidasLS = [];
+        let tareaTDLS = [];
         if (localStorage.getItem(keyLS) === null) {
-            return actividadesObtenidasLS;
+            return tareaTDLS;
         }
 
         return JSON.parse(localStorage.getItem(keyLS));
     }
 
-    static TerminarActividadesLS(contenido) {
-        let actividadLS = this.ObtenerLocalStorage('actividades');
+    static TerminarTareaLS(contenido) {
+        let tareaLS = this.ObtenerLocalStorage('tareas');
         let terminadasLS = this.ObtenerLocalStorage('terminadas');
-        let arrayNuevoActividadLS = [];
+        let arrayTareaNuevaLS = [];
 
-        for (let i = 0; i < actividadLS.length; i++) {
-            if (contenido !== actividadLS[i]) {
-                arrayNuevoActividadLS.push(actividadLS[i]);
+        for (let i = 0; i < tareaLS.length; i++) {
+            if (contenido !== tareaLS[i]) {
+                arrayTareaNuevaLS.push(tareaLS[i]);
             } else {
-                terminadasLS.push(actividadLS[i]);
+                terminadasLS.push(tareaLS[i]);
             }
         }
 
-        localStorage.setItem('actividades', JSON.stringify(arrayNuevoActividadLS));
+        localStorage.setItem('tareas', JSON.stringify(arrayTareaNuevaLS));
         localStorage.setItem('terminadas', JSON.stringify(terminadasLS));
     }
 
-    static LimpiarTerminados(lista) {
+    static EliminarTerminadas(lista) {
         if (localStorage.getItem('terminadas') === null) return;
         localStorage.removeItem('terminadas');
         const ul = document.getElementById(lista);

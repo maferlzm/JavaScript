@@ -1,47 +1,47 @@
-const actividad = document.querySelector('#txActividad');
-const listaActividades = document.querySelector('#lista-pendientes');
-const listaTerminadas = document.querySelector('#lista-terminadas');
+const tarea = document.querySelector('#txTareas');
+const listaTareas = document.querySelector('#lista-porHacer');
+const listaCompletadas = document.querySelector('#lista-completadas');
 EventListener();
 CargarActividadesLocalStorage();
 
 function EventListener() {
     document.querySelector('#formulario').addEventListener('submit', ObtenerFormulario);
-    listaActividades.addEventListener('click', TerminarActividad);
-    document.querySelector('#btnLimpiar').addEventListener('click', LimpiarTerminados);
+    listaTareas.addEventListener('click', TerminarActividad);
+    document.querySelector('#btnEliminarCompletadas').addEventListener('click', EliminarTerminadas);
 }
 
-function LimpiarTerminados() {
-    ManipularLocalStorage.LimpiarTerminados('lista-terminadas');
+function EliminarTerminadas() {
+    ManipularLocalStorage.EliminarTerminadas('lista-completadas');
 }
 
 function ObtenerFormulario(event) {
     event.preventDefault();
 
-    if (actividad.value.trim() == '') return;
+    if (tarea.value.trim() == '') return;
 
-    const InstanciaActividades = new Actividades(actividad.value);
-    InstanciaActividades.AgregarActividadDom(listaActividades, true);
-    actividad.value = '';
+    const InstanciaActividades = new toDo(tarea.value);
+    InstanciaActividades.AgregarTarea(listaTareas, true);
+    tarea.value = '';
 }
 
 function TerminarActividad() {
-    Actividades.EliminarActividadDom(event);
+    toDo.EliminarTarea(event);
     const liBorrado = event.target.parentElement.parentElement;
     let textoLiBorrado = liBorrado.textContent.substring(0, liBorrado.textContent.length - 1);
-    const instanciaTerminado = new Actividades(textoLiBorrado);
-    instanciaTerminado.AgregarActividadDom(listaTerminadas, false);
+    const instanciaTerminado = new toDo(textoLiBorrado);
+    instanciaTerminado.AgregarTarea(listaCompletadas, false);
 }
 
 function CargarActividadesLocalStorage() {
-    const actividadesLS = ManipularLocalStorage.ObtenerLocalStorage('actividades');
-    for (let i = 0; i < actividadesLS.length; i++) {
-        const InstanciaActividades = new Actividades(actividadesLS[i]);
-        InstanciaActividades.AgregarActividadDom(listaActividades, false);
+    const tareasLS = ManipularLocalStorage.ObtenerLocalStorage('tareas');
+    for (let i = 0; i < tareasLS.length; i++) {
+        const InstanciaActividades = new toDo(tareasLS[i]);
+        InstanciaActividades.AgregarTarea(listaTareas, false);
     }
     const terminadasLS = ManipularLocalStorage.ObtenerLocalStorage('terminadas');
     console.log(terminadasLS);
     for (let i = 0; i < terminadasLS.length; i++) {
-        const InstanciaActividadesTerminadas = new Actividades(terminadasLS[i]);
-        InstanciaActividadesTerminadas.AgregarActividadDom(listaTerminadas, false);
+        const InstanciaActividadesTerminadas = new toDo(terminadasLS[i]);
+        InstanciaActividadesTerminadas.AgregarTarea(listaCompletadas, false);
     }
 }
