@@ -24,6 +24,7 @@ function ObtenerFormulario(event) {
     tarea.value = '';
 }
 
+
 function TerminarActividad() {
     toDo.EliminarTarea(event);
     const liBorrado = event.target.parentElement.parentElement;

@@ -26,6 +26,7 @@ class toDo {
 
     }
 
+    
     static EliminarTarea(event) {
         if (event.target.tagName !== 'SPAN') return;
         const liBorrado = event.target.parentElement.parentElement;

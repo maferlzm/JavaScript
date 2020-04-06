@@ -17,6 +17,7 @@ class ManipularLocalStorage {
         return JSON.parse(localStorage.getItem(keyLS));
     }
 
+    
     static TerminarTareaLS(contenido) {
         let tareaLS = this.ObtenerLocalStorage('tareas');
         let terminadasLS = this.ObtenerLocalStorage('terminadas');
