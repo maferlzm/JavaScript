@@ -18,6 +18,4 @@ function areaCirculo(){
     let calculo = document.getElementById('calculo');
     calculo.innerText=area;
 
-
-
 }

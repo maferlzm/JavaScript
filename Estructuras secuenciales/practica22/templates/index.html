@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"/>
+    <title>Número mayor de tres registrados</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Ingresa el primer número: </label>
+                        <input type="number" class="form-control" placeholder="Número 1">
+                        <label for="">Ingresa el segundo número: </label>
+                        <input type="number" class="form-control" placeholder="Número 2">
+                        <label for="">Ingresa el tercer número: </label>
+                        <input type="number" class="form-control" placeholder="Número 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-outline-success btn-block" id="btnComparar">Número mayor</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-success" id="numMayor"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>
