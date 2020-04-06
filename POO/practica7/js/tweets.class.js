@@ -26,7 +26,7 @@ class Tweets {
         if (origen) ManipularLocalStorage.AgregarTweetLocalStorage(this.contenido);
 
     }
-
+    
     static EliminarTweetDOM(event) {
         if (event.target.tagName !== 'SPAN') return;
         const liBorrado = event.target.parentElement.parentElement;

@@ -27,7 +27,7 @@ class ManipularLocalStorage {
             }
         }
 
-        // localStorage.removeItem('tweets');
+    
         localStorage.setItem('tweets', JSON.stringify(arrayNuevoTweetLS));
     }
 }
