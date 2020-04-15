@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+    <!-- css -->
+    <link  rel="stylesheet" href="/css/bootstrap-material-design.min.css" integrity="sha384-R80DC0KVBO4GSTw+wZ5x2zn2pu4POSErBkf8/fSFhPXHxvHJydT0CSgAP2Yo2r4I" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/css/custom.css" />
+    <title>Partes del cuerpo</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col col-md-8 mr-md-auto ml-md-auto">
+          <div id="contenido">
+            <header>
+              <h1 class="text-center">Partes del cuerpo humano - Parts of human body</h1>
+            </header>
+            <div class="row contenido-formulario">
+              <div class="col col-md-10 mr-md-auto ml-md-auto">
+                <form action="#" id="cotizar-seguro">
+                    <div class="form-group">
+                    <!-- <fieldset class="form-group"> -->
+                        <div class="row">
+                            <!-- <legend class="col-form-legend col-12">Idioma:</legend>
+                            <div class="col12">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="tipo" value="ingles" checked/>Inglés</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="tipo" value="espanol"/>Español</label>
+                                        </div>
+                                    </div>
+                                 -->
+                                 <label for="marca">Sistema:</label>
+                                 <select class="form-control" id="marca">
+                                     <option value="">- Seleccionar -</option>
+                                     <option value="circulatorio">Circulatorio</option>
+                                     <option value="digestivo">Digestivo</option>
+                                     <option value="oseo">Óseo</option>
+                                     <option value="muscular">Muscular</option>
+                                     <option value="nervioso">Nervioso</option>
+                                 </select>
+                                 <div class="row">
+                                     <div class="col-12 mt-3">
+                                        <label for="">Parte del cuerpo</label>
+                                         <div class="alert alert-success" id="parte"></div>
+                                     </div>
+                                     <div class="col-12" id="contenedor">
+                                         <img src="/img/inicio.png" alt="imgBody" id="imgBody">
+                                     </div>
+         
+                                 </div>
+                             </div>
+                             
+                                 </div>
+                        </div>
+                            <!-- </fieldset> -->
+                            <!-- <div id="cargando">
+                                <img src="/img/spinner.gif"/>
+                            </div> -->
+                            <!-- <div class="form-group">
+                                <button type="submit" class="btn btn-raised btn-primary">Aceptar</button>
+                            </div> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- JS Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("body").bootstrapMaterialDesign();
+    });
+    </script>
+
+    <!-- cambio de sistema -->
+<script>
+    marca.addEventListener("change",()=>{
+  imgBody.setAttribute("src","/img/" + marca.selectedOptions[0].value + ".png")
+})
+</script>
+    <script src="/js/class/seguro.class.js"></script>
+    <script src="/js/class/interfaz.class.js"></script>
+    <script src="/js/main/app.js"></script>
+    <script src="/js/Circulatorio.class.js"></script>
+    <script src="/js/Digestivo.class.js"></script>
+    <script src="/js/Muscular.class.js"></script>
+    <script src="/js/Nervioso.class.js"></script>
+    <script src="/js/Oseo.class.js"></script>
+  </body>
+</html>
